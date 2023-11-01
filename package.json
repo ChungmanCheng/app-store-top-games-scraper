@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ChungmanCheng/app-store-top-games-scraper#readme",
   "dependencies": {
-    "puppeteer": "^21.4.1"
+    "puppeteer": "^21.4.1",
+    "selenium-webdriver": "^4.14.0"
   }
 }

@@ -49,6 +49,8 @@ const getQuotes = async () => {
         .forBrowser('chrome')
         .setChromeOptions(chromeOptions)
         .build();
+
+    var quotes;
   
     try {
 
@@ -57,7 +59,7 @@ const getQuotes = async () => {
     
         const quoteList = await driver.findElements(By.css(".we-product-collection__item"));
     
-        const quotes = await Promise.all(quoteList.map(async (quote, index) => {
+        quotes = await Promise.all(quoteList.map(async (quote, index) => {
             const id = index + 1;
             const name = await quote.findElement(By.css(".we-product-collection__item__product-name")).getText();
             const description = await quote.findElement(By.css(".we-product-collection__item__category")).getText();
@@ -75,12 +77,11 @@ const getQuotes = async () => {
             return { id, name, description, image, android_url, ios_url };
         }));
 
-        return quotes;
-
     } finally {
         await driver.quit();
     }
 
+    return quotes;
 };
 
 async function main(){

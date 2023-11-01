@@ -1,0 +1,23 @@
+{
+  "name": "app-store-top-games-scraper",
+  "version": "1.0.0",
+  "description": "A web scrapper for scraping top games list from app store",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChungmanCheng/app-store-top-games-scraper.git"
+  },
+  "author": "Chung Man Cheng",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ChungmanCheng/app-store-top-games-scraper/issues"
+  },
+  "homepage": "https://github.com/ChungmanCheng/app-store-top-games-scraper#readme",
+  "dependencies": {
+    "puppeteer": "^21.4.1"
+  }
+}

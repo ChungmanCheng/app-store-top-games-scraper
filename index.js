@@ -86,9 +86,9 @@ const getQuotes = async () => {
 
 async function main(){
 
-    let driver = await new Builder().forBrowser("chrome").build();
-
     var temp = await getQuotes();
+
+    console.log(temp);
 
 }
 
